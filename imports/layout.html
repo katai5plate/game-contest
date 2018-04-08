@@ -1,0 +1,7 @@
+<!-- 原則固定 -->
+<template name="layout">
+    <!-- ページ毎のテンプレート指定は /lib/router.js から指定する -->
+    {{> Template.dynamic template=top}}
+    {{> Template.dynamic template=body}}
+    {{> Template.dynamic template=bottom}}
+</template>

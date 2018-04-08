@@ -1,0 +1,49 @@
+<template name="games">
+    <table class="table">
+        <caption>ゲーム一覧</caption>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Platform</th>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each list}}
+            <tr>
+                <th>{{no}}</th>
+                <th>{{platform}}</th>
+                <th>{{date}}</th>
+                <th>{{title}}</th>
+                <th>
+                    ({{clength}})
+                </th>
+            </tr>
+            <tr>
+                <th colspan="5">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Writer</th>
+                                    <th>Message</th>
+                                    <th>Vote</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each comments _id}}
+                                <tr>
+                                    <th>{{writer}}</th>
+                                    <th>{{message}}</th>
+                                    <th>{{vote}}</th>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                </th>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</template>
